@@ -1,0 +1,447 @@
+{
+  "_instrucciones": "Edita este archivo para cambiar lo que responde el bot. 'palabras' son frases que activan la intención (sin acentos, en minúsculas); el número es su peso. 'respuestas' son variantes: el bot elige una al azar para sonar natural. Usa {nombre} para el nombre del alumno.",
+  "bot": {
+    "nombre": "Coordinación de Titulación",
+    "area": "Coordinación de Titulación",
+    "institucion": "TecNM Campus Matehuala",
+    "firma_correo": "Coordinación de Titulación\nTecNM Campus Matehuala · División de Estudios Profesionales\nAtención automatizada por TechMth Solutions"
+  },
+  "contacto": {
+    "correo": "coor_titulacion@matehuala.tecnm.mx",
+    "extension": "195",
+    "responsable": "Coordinador de Titulación",
+    "lugar": "Oficina de la Coordinación de Titulación, División de Estudios Profesionales"
+  },
+  "carreras": {
+    "ISC": [
+      "isc",
+      "sistemas",
+      "sistemas computacionales",
+      "ingenieria en sistemas",
+      "ing sistemas"
+    ],
+    "IIND": [
+      "iind",
+      "ii",
+      "industrial",
+      "ingenieria industrial",
+      "ing industrial"
+    ],
+    "IGE": [
+      "ige",
+      "gestion",
+      "gestion empresarial",
+      "ingenieria en gestion empresarial"
+    ],
+    "IC": [
+      "ic",
+      "civil",
+      "ingenieria civil"
+    ],
+    "IEM": [
+      "iem",
+      "electromecanica",
+      "ingenieria electromecanica"
+    ]
+  },
+  "menu": [
+    [
+      "1",
+      "requisitos",
+      "Requisitos para titularme"
+    ],
+    [
+      "2",
+      "documentos",
+      "Documentos del expediente"
+    ],
+    [
+      "3",
+      "no_adeudo",
+      "Carta de no adeudo"
+    ],
+    [
+      "4",
+      "pago",
+      "Pago y referencia"
+    ],
+    [
+      "5",
+      "acto",
+      "Fecha del acto protocolario"
+    ],
+    [
+      "6",
+      "estatus",
+      "Mi avance: qué tengo y qué me falta"
+    ],
+    [
+      "7",
+      "registro",
+      "Actualizar mis datos"
+    ],
+    [
+      "8",
+      "humano",
+      "Hablar con una persona"
+    ]
+  ],
+  "intenciones": {
+    "saludo": {
+      "palabras": {
+        "hola": 1,
+        "buenas": 1,
+        "buenos dias": 1,
+        "buenas tardes": 1,
+        "buenas noches": 1,
+        "que tal": 1,
+        "saludos": 1,
+        "hey": 1
+      },
+      "respuestas": [
+        "¡Hola{nombre_coma}! Te atiende la Coordinación de Titulación. Puedo resolver tus dudas sobre tu proceso de titulación y decirte qué ya tienes y qué te falta. ¿En qué te ayudo?",
+        "¡Qué gusto saludarte{nombre_coma}! Estás en la atención de la Coordinación de Titulación. Pregúntame sobre tu trámite o escribe *6* para ver tu avance."
+      ]
+    },
+    "despedida": {
+      "palabras": {
+        "adios": 2,
+        "bye": 2,
+        "hasta luego": 2,
+        "nos vemos": 2,
+        "hasta pronto": 2,
+        "chao": 2
+      },
+      "respuestas": [
+        "¡Hasta luego{nombre_coma}! Aquí estaré si te surge otra duda. Mucho éxito con tu titulación 🎓",
+        "Que tengas un excelente día{nombre_coma}. Cuando quieras me vuelves a escribir."
+      ]
+    },
+    "gracias": {
+      "palabras": {
+        "gracias": 2,
+        "te agradezco": 2,
+        "muy amable": 2,
+        "mil gracias": 2
+      },
+      "respuestas": [
+        "¡Con mucho gusto{nombre_coma}! ¿Hay algo más en lo que te pueda ayudar?",
+        "Para eso estoy 😊 Si tienes otra duda, aquí sigo."
+      ]
+    },
+    "menu": {
+      "palabras": {
+        "menu": 3,
+        "opciones": 2,
+        "ayuda": 2,
+        "que puedes hacer": 3,
+        "en que me ayudas": 3,
+        "informacion": 1,
+        "dudas": 1
+      },
+      "respuestas": [
+        "{menu}"
+      ]
+    },
+    "requisitos": {
+      "palabras": {
+        "requisito": 3,
+        "requisitos": 3,
+        "que necesito": 2,
+        "que ocupo": 2,
+        "que piden": 2,
+        "para titularme": 1,
+        "puedo titularme": 1,
+        "condiciones": 2,
+        "que se necesita": 2
+      },
+      "respuestas": [
+        "Para titularte por residencia profesional (generaciones 2015 en adelante) necesitas tener concluido:\n• Todas tus materias\n• El servicio social\n• Los 5 créditos complementarios\n• La residencia profesional\n• El inglés acreditado\n\nAdemás, la carta de no adeudo y tu expediente completo. Si quieres, escribe *6* y reviso cómo vas tú.",
+        "Claro{nombre_coma}. Los requisitos son: materias concluidas, servicio social liberado, 5 créditos complementarios, residencia profesional terminada e inglés acreditado. Con eso tramitas tu carta de no adeudo y armas tu expediente. ¿Quieres que revise tu avance? Escribe *6*."
+      ]
+    },
+    "proceso": {
+      "palabras": {
+        "pasos": 3,
+        "proceso": 3,
+        "procedimiento": 3,
+        "que sigue": 4,
+        "como me titulo": 4,
+        "como le hago": 3,
+        "por donde empiezo": 4,
+        "que hago": 2,
+        "tramite de titulacion": 3,
+        "como es el tramite": 4,
+        "etapas": 3
+      },
+      "respuestas": [
+        "Te explico el camino completo{nombre_coma}:\n1. Verifica tus créditos, servicio social, inglés y residencia.\n2. Tramita tu carta de no adeudo (5 firmas).\n3. Entrega tu expediente en la Coordinación (portada con Vo.Bo., anexos 8A, 8B y 9, acta de calificación y solicitud).\n4. Servicios Escolares revisa y emite tu constancia de no inconveniencia.\n5. Te llega por correo la referencia de pago y pagas.\n6. La Coordinación programa tu acto protocolario y te avisa por correo.\n7. Presentas el acto y recibes tu acta.\n\n¿Sobre cuál paso quieres más detalle?",
+        "Son 7 pasos{nombre_coma}: requisitos cumplidos → carta de no adeudo → entrega del expediente → constancia de Servicios Escolares → pago con la referencia que te mandan por correo → programación del acto → acto protocolario y acta. Pregúntame por cualquiera y te doy los detalles."
+      ]
+    },
+    "documentos": {
+      "palabras": {
+        "documento": 3,
+        "documentos": 3,
+        "papeles": 3,
+        "papeleria": 3,
+        "expediente": 3,
+        "anexo": 3,
+        "anexos": 3,
+        "8a": 3,
+        "8b": 3,
+        "portada": 3,
+        "formato": 2,
+        "formatos": 2,
+        "acta de calificacion": 3,
+        "que entrego": 2
+      },
+      "respuestas": [
+        "Tu expediente lleva estos documentos:\n1. Portada del Reporte Final con el visto bueno de tu asesor\n2. Anexo 8A\n3. Anexo 8B\n4. Anexo 9\n5. Acta de calificación de residencias\n6. Solicitud del estudiante (formato TecNM-AC-PO-006-01)\n\nRevisa que tu nombre y número de control coincidan en todos; es el error más común.",
+        "Te comparto la lista{nombre_coma}: portada del Reporte Final con Vo.Bo. del asesor, anexos 8A, 8B y 9, acta de calificación de residencias y la solicitud del estudiante (formato -01). Tip: verifica que los datos sean iguales en todos los formatos."
+      ]
+    },
+    "no_adeudo": {
+      "palabras": {
+        "no adeudo": 4,
+        "adeudo": 3,
+        "adeudos": 3,
+        "firmas": 3,
+        "firma": 2,
+        "carta": 2,
+        "biblioteca": 2,
+        "almacen": 2,
+        "financieros": 2,
+        "centro de informacion": 2,
+        "debo": 1
+      },
+      "respuestas": [
+        "La carta de no adeudo la pides en la Coordinación y lleva 5 firmas: Recursos Financieros, tu coordinador, Biblioteca, Centro de Información y Almacén. Si debes algo en alguna área (por ejemplo un libro o material), primero liquídalo ahí. ¿Quieres que revise cuáles ya tienes? Escribe *6*.",
+        "Son 5 firmas{nombre_coma}: Recursos Financieros, coordinador, Biblioteca, Centro de Información y Almacén. Después, la carta forma parte de los requisitos que entregas en Servicios Escolares."
+      ]
+    },
+    "constancia": {
+      "palabras": {
+        "constancia": 3,
+        "no inconveniencia": 4,
+        "servicios escolares": 3,
+        "escolares": 2
+      },
+      "respuestas": [
+        "La constancia de no inconveniencia la emite Servicios Escolares cuando revisa que cumples todos los requisitos. Ellos mismos se la envían a la Coordinación de Titulación; tú no tienes que llevarla."
+      ]
+    },
+    "pago": {
+      "palabras": {
+        "pago": 3,
+        "pagar": 3,
+        "costo": 3,
+        "cuesta": 3,
+        "cuanto es": 2,
+        "precio": 3,
+        "referencia": 3,
+        "deposito": 3,
+        "banco": 2,
+        "cuota": 3
+      },
+      "respuestas": [
+        "Cuando tu expediente está completo y llega tu constancia de no inconveniencia, la Coordinación genera tu referencia de pago y te la manda por correo. En esa referencia viene el monto exacto. Una vez que pagas, se registra y quedas listo para que te programen el acto.",
+        "El pago va al final{nombre_coma}: la Coordinación te envía por correo la referencia (con el monto) cuando tu expediente ya está completo. No necesitas pagar antes."
+      ]
+    },
+    "acto": {
+      "palabras": {
+        "acto": 3,
+        "protocolario": 3,
+        "acto protocolario": 4,
+        "ceremonia": 3,
+        "cuando me titulo": 4,
+        "fecha": 2,
+        "jurado": 3,
+        "sala": 2,
+        "examen": 2,
+        "hora": 1
+      },
+      "respuestas": [
+        "La Coordinación reúne paquetes de 30 a 35 expedientes completos y pagados para titularlos juntos; si no se completa el paquete, programa con los que haya. Te avisan por correo la fecha, la hora y el lugar (la Sala de Titulación) con al menos 3 días hábiles de anticipación.",
+        "Tu fecha llega por correo{nombre_coma}. Primero tu expediente debe estar completo y pagado; luego la Coordinación forma un grupo de 30 a 35 egresados y programa el acto, avisándote con mínimo 3 días hábiles."
+      ]
+    },
+    "reprobar": {
+      "palabras": {
+        "no apruebo": 4,
+        "repruebo": 4,
+        "reprobar": 4,
+        "si no paso": 4,
+        "suspendido": 3,
+        "otra oportunidad": 3,
+        "no aprobe": 4
+      },
+      "respuestas": [
+        "Si en el acto protocolario el jurado no te aprueba, tienes 3 meses para presentarlo de nuevo. También puedes cambiar de opción de titulación. La Coordinación te orienta en ese caso."
+      ]
+    },
+    "duracion": {
+      "palabras": {
+        "cuanto tarda": 4,
+        "cuanto tiempo": 4,
+        "tarda": 3,
+        "demora": 3,
+        "dias": 1,
+        "semanas": 1,
+        "rapido": 2,
+        "tiempo": 2
+      },
+      "respuestas": [
+        "Depende sobre todo de qué tan rápido completes tu papelería: la Coordinación no detiene el trámite. Ya con el expediente completo y pagado, juntar el grupo para el acto suele tardar entre una semana y 15 días."
+      ]
+    },
+    "residencia": {
+      "palabras": {
+        "residencia": 2,
+        "residencias": 2,
+        "opcion de titulacion": 3,
+        "titulacion integral": 3,
+        "opciones": 1,
+        "generacion": 2,
+        "tesis": 3
+      },
+      "respuestas": [
+        "Si eres de la generación 2015 en adelante, te titulas con tu proyecto de residencia profesional (titulación integral): no necesitas tesis ni otra opción. Para generaciones anteriores la información cambia; en ese caso escribe a la Coordinación."
+      ]
+    },
+    "ingles": {
+      "palabras": {
+        "ingles": 4,
+        "idioma": 3,
+        "lengua extranjera": 4,
+        "toefl": 4,
+        "acreditar ingles": 4
+      },
+      "respuestas": [
+        "El inglés acreditado es uno de tus requisitos para titularte. Si aún no lo tienes, acércate a la Coordinación de Lenguas Extranjeras de tu Tec para ver cómo acreditarlo. Puedo revisar si ya aparece en tus datos: escribe *6*."
+      ]
+    },
+    "servicio_social": {
+      "palabras": {
+        "servicio social": 4,
+        "servicio": 2,
+        "social": 2
+      },
+      "respuestas": [
+        "Necesitas tener tu servicio social concluido y liberado antes de iniciar. Si quieres saber si ya aparece como cumplido, escribe *6* y lo reviso."
+      ]
+    },
+    "creditos": {
+      "palabras": {
+        "creditos": 4,
+        "complementarios": 4,
+        "credito": 3
+      },
+      "respuestas": [
+        "Debes tener tus 5 créditos complementarios. Si te falta alguno, consulta tu kárdex con la coordinadora de tu carrera. Escribe *6* si quieres que revise lo que tengo registrado."
+      ]
+    },
+    "contacto": {
+      "palabras": {
+        "contacto": 3,
+        "telefono de la coordinacion": 4,
+        "correo de la coordinacion": 4,
+        "extension": 3,
+        "donde esta": 3,
+        "ubicacion": 3,
+        "oficina": 3,
+        "donde queda": 3,
+        "horario": 3,
+        "a que hora": 2,
+        "coordinador": 2,
+        "coordinadora": 2
+      },
+      "respuestas": [
+        "Puedes contactar a la Coordinación de Titulación:\n📍 {lugar}\n✉️ {correo}\n☎️ Extensión {extension}\nPara horarios de atención, te recomiendo confirmarlos por correo o en la extensión."
+      ]
+    },
+    "estatus": {
+      "palabras": {
+        "estatus": 4,
+        "status": 4,
+        "en que voy": 4,
+        "como va": 3,
+        "como voy": 4,
+        "mi tramite": 3,
+        "avance": 3,
+        "ya puedo titularme": 4,
+        "que me falta": 4,
+        "me falta": 3,
+        "listo para titular": 4,
+        "revisa": 2,
+        "consultar": 2,
+        "mi estado": 4,
+        "ya estoy lista": 4,
+        "ya estoy listo": 4,
+        "estoy lista": 3,
+        "estoy listo": 3,
+        "me falta algo": 4
+      },
+      "respuestas": [
+        "__dinamica__"
+      ]
+    },
+    "registro": {
+      "palabras": {
+        "registrarme": 4,
+        "registro": 3,
+        "registrar": 3,
+        "mis datos": 3,
+        "actualizar": 3,
+        "cambiar mi correo": 4,
+        "cambiar mi telefono": 4,
+        "inscribirme": 3,
+        "dar de alta": 4,
+        "darme de alta": 4,
+        "cambiar": 2,
+        "corregir": 2,
+        "me equivoque": 2,
+        "mi correo": 2,
+        "mi telefono": 2,
+        "mi celular": 2
+      },
+      "respuestas": [
+        "__dinamica__"
+      ]
+    },
+    "humano": {
+      "palabras": {
+        "hablar con alguien": 5,
+        "persona": 3,
+        "humano": 5,
+        "asesor": 2,
+        "operador": 5,
+        "agente": 4,
+        "atencion personal": 5,
+        "quiero hablar": 4,
+        "comunicarme con": 3,
+        "queja": 4,
+        "hablar con": 4,
+        "llamar a alguien": 4,
+        "me contacten": 4,
+        "que me llamen": 4
+      },
+      "respuestas": [
+        "__dinamica__"
+      ]
+    }
+  },
+  "frases": {
+    "no_entendi": [
+      "Mmm, no estoy seguro de haber entendido{nombre_coma}. ¿Me lo dices con otras palabras? También puedes elegir una opción:",
+      "Perdón, esa no la capté bien 😅. Te dejo las opciones con las que te puedo ayudar:"
+    ],
+    "seguimiento": [
+      "¿Te ayudo con algo más?",
+      "¿Tienes otra duda?",
+      "Si necesitas algo más, aquí estoy.",
+      ""
+    ]
+  }
+}

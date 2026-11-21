@@ -1,0 +1,6 @@
+{
+  "_ayuda": "ruta_excel: ruta del archivo .xlsx. Para que se suba solo a la nube, ponlo dentro de tu carpeta de OneDrive, por ejemplo C:/Users/TuUsuario/OneDrive/Titulacion/Titulacion_Bot.xlsx. Si el archivo ya existe con las hojas Alumno, Requisitos y No Adeudo, el bot las usa y agrega las hojas Mensajes, Llamadas y Pendientes. clave_coordinacion: contraseña del Acceso Coordinación en escritorio; en el servidor usa la variable COORD_CLAVE.",
+  "ruta_excel": "datos/Titulacion_Bot.xlsx",
+  "cargar_datos_de_ejemplo": true,
+  "clave_coordinacion": "TechMth2026"
+}

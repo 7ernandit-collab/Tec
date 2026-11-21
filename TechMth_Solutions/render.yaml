@@ -1,0 +1,20 @@
+# Versión REAL de TechMth Solutions en Render (plan gratuito).
+# Render lee este archivo al crear el servicio con "New > Blueprint".
+services:
+  - type: web
+    name: techmth-solutions
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py --web
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: DATOS_DE_EJEMPLO
+        value: "0"
+      - key: COORD_CLAVE          # contraseña del Acceso Coordinación (la escribes tú en Render)
+        sync: false
+      - key: GITHUB_TOKEN         # token para respaldar el Excel en tu repositorio privado
+        sync: false
+      - key: GITHUB_REPO_DATOS    # por ejemplo  tu-usuario/techmth-datos
+        sync: false
