@@ -33,7 +33,7 @@ jobs:
           cp -r TechMth_Solutions/main.py TechMth_Solutions/bot TechMth_Solutions/base_conocimiento.json TechMth_Solutions/config.json web/
           cp -r TechMth_Solutions/assets web/assets
           rm -rf web/bot/__pycache__ web/assets/descargas
-          echo "openpyxl" > web/requirements.txt
+          printf "flet==0.28.3\nopenpyxl\n" > web/requirements.txt
 
       - name: Generar el sitio estatico
         run: >-
