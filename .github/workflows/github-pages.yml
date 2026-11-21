@@ -10,7 +10,7 @@ permissions:
   pages: write
   id-token: write
 
-concurrency: 
+concurrency:
   group: pages
   cancel-in-progress: true
 
@@ -34,77 +34,18 @@ jobs:
           rm -rf web/bot/__pycache__
           echo "openpyxl" > web/requirements.txt
 
-      - name: Generar el sitio estático
-        run: |
-          flet publish web/main.py \
-            --assets TechMth_Solutions/assets \
-            --distpath sitio \
-            --app-name "TechMth Solutions" \
-            --app-short-name "TechMth" \
-            --app-description "Coordinación de Titulación · TecNM Campus Matehuala" \
-            --base-url "/Tec/" \
-            --route-url-strategy hash
+      - name: Generar el sitio estatico
+        run: >-
+          flet publish web/main.py
+          --assets TechMth_Solutions/assets
+          --distpath sitio
+          --app-name "TechMth Solutions"
+          --app-short-name "TechMth"
+          --app-description "Coordinacion de Titulacion TecNM Campus Matehuala"
+          --base-url "/Tec/"
+          --route-url-strategy hash
 
       - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: sitio
-
-  publicar:
-    needs: construir
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.despliegue.outputs.page_url }}
-    steps:
-      - id: despliegue
-        uses: actions/deploy-pages@v4name: Demostración en GitHub Pages
-
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
-
-jobs:
-  construir:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Instalar Flet
-        run: pip install "flet==0.28.3"
-
-      - name: Preparar la app para el navegador
-        run: |
-          mkdir -p web
-          cp -r TechMth_Solutions/main.py TechMth_Solutions/bot TechMth_Solutions/base_conocimiento.json TechMth_Solutions/config.json web/
-          rm -rf web/bot/__pycache__
-          echo "openpyxl" > web/requirements.txt
-
-      - name: Generar el sitio estático
-        run: |
-          flet publish web/main.py \
-            --assets TechMth_Solutions/assets \
-            --distpath sitio \
-            --app-name "TechMth Solutions" \
-            --app-short-name "TechMth" \
-            --app-description "Coordinación de Titulación · TecNM Campus Matehuala" \
-            --base-url "/${GITHUB_REPOSITORY#*/}/" \
-            --route-url-strategy hash
 
       - uses: actions/upload-pages-artifact@v3
         with:
