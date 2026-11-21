@@ -31,19 +31,23 @@ jobs:
         run: |
           mkdir -p web
           cp -r TechMth_Solutions/main.py TechMth_Solutions/bot TechMth_Solutions/base_conocimiento.json TechMth_Solutions/config.json web/
-          rm -rf web/bot/__pycache__
+          cp -r TechMth_Solutions/assets web/assets
+          rm -rf web/bot/__pycache__ web/assets/descargas
           echo "openpyxl" > web/requirements.txt
 
       - name: Generar el sitio estatico
         run: >-
           flet publish web/main.py
-          --assets TechMth_Solutions/assets
-          --distpath sitio
+          --assets "$GITHUB_WORKSPACE/web/assets"
+          --distpath "$GITHUB_WORKSPACE/sitio"
           --app-name "TechMth Solutions"
           --app-short-name "TechMth"
           --app-description "Coordinacion de Titulacion TecNM Campus Matehuala"
           --base-url "/Tec/"
           --route-url-strategy hash
+
+      - name: Revisar que el sitio se genero
+        run: ls -la sitio && test -f sitio/index.html
 
       - uses: actions/configure-pages@v5
 
