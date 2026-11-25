@@ -16,7 +16,6 @@ CARRERAS = {
     "IIND": "Ingeniería Industrial",
     "IGE": "Ingeniería en Gestión Empresarial",
     "IC": "Ingeniería Civil",
-    "IEM": "Ingeniería Electromecánica",
 }
 CAMPOS = [  # orden de la tabla Alumno
     ("num_control", "Nº Control"),
