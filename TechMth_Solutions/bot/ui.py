@@ -400,6 +400,12 @@ class AppTechMth:
                                            _degradado("#D4CDBE", "#EAE5DA")))
         return ft.Row(celdas, vertical_alignment=ft.CrossAxisAlignment.CENTER, spacing=0)
 
+    def _volver(self, texto, accion, icono=None):
+        """Acción para regresar: arriba a la izquierda, lejos del botón principal."""
+        return ft.Row([ft.TextButton(texto, icon=icono or I.ARROW_BACK_ROUNDED, on_click=accion,
+                                     style=ft.ButtonStyle(color=INDIGO, padding=ft.padding.symmetric(horizontal=6, vertical=4)))],
+                      alignment=ft.MainAxisAlignment.START)
+
     def _titulo(self, texto, sub=""):
         filas = [ft.Text(texto, size=24, weight=ft.FontWeight.BOLD, color=AZUL, style=_sombra_texto(True))]
         if sub:
@@ -509,10 +515,9 @@ class AppTechMth:
         titulo = (self._titulo("Completa tus datos", "Se guardan en el mismo orden que la tabla de la Coordinación.")
                   if self.nuevo else
                   self._titulo("Actualiza tus datos", "Escribe solo lo que quieras cambiar."))
-        return [self._pasos(2), titulo, *controles.values(),
-                ft.Row([boton_claro("Regresar", regresar, I.ARROW_BACK_ROUNDED),
-                        boton("Revisar mis datos", revisar, I.ARROW_FORWARD_ROUNDED)],
-                       alignment=ft.MainAxisAlignment.SPACE_BETWEEN, wrap=True, run_spacing=10)]
+        return [self._volver("Regresar", regresar), self._pasos(2), titulo, *controles.values(),
+                ft.Container(ft.Row([boton("Revisar mis datos", revisar, I.ARROW_FORWARD_ROUNDED, expand=True)]),
+                             margin=ft.margin.only(top=10))]
 
     # paso 3 -------------------------------------------------------------
     def _valores(self) -> list[str]:
