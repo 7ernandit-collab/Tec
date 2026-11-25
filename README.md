@@ -40,3 +40,11 @@ Les muestra la ruta para concluir su titulación, paso por paso.
   * Barra de navegación: solo con los íconos (Inicio, WhatsApp, Telegram, Correo y Llamadas) en mosaicos con relieve. El nombre aparece al pasar el mouse.
 
   * Logos institucionales: el TecNM y el Instituto Tecnológico de Matehuala van en una placa en el encabezado, el portal, el Inicio y el Acceso Coordinación.
+
+```texto
+  Tec/
+├── .github/workflows/     ← publica la página (no se toca)
+├── TechMth_Solutions/     ← la automatización (no se toca)
+├── documentacion/         ← los PDF de E3 y E4
+└── README.md
+```
